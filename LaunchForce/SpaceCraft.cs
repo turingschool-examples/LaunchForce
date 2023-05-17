@@ -15,6 +15,7 @@ namespace LaunchForce
         {
             Name = name;
             Fuel = fuel;
+            Personnel = new List<Person>();
         }
 
         public void AddPersonnel(Person personToAdd) 

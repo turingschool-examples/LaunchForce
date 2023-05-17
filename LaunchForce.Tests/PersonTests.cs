@@ -14,7 +14,7 @@ namespace LaunchForce.Tests
             Assert.Equal(name, testPerson.Name);
             Assert.Equal(xp, testPerson.Experience);
             Assert.IsType<List<string>>(testPerson.Specialties);
-            Assert.Empty(testPerson.Specialities);
+            Assert.Empty(testPerson.Specialties);
         }
         [Fact]
         public void Person_AddSpecialty_AddsStringToSpecialities()
@@ -22,11 +22,11 @@ namespace LaunchForce.Tests
             string name = "Jack White";
             int xp = 10;
             var testPerson = new Person(name, xp);
-            string speciality = "Rebounding";
-            testPerson.AddSpeciality(speciality);
+            string specialty = "Rebounding";
+            testPerson.AddSpecialty(specialty);
 
-            Assert.Single(testPerson.Specialities);
-            Assert.Equal(speciality, testPerson.Specialities[0]);
+            Assert.Single(testPerson.Specialties);
+            Assert.Equal(specialty, testPerson.Specialties[0]);
         }
     }
 }

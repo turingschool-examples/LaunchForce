@@ -75,7 +75,7 @@ namespace LaunchForce.Tests
             var person2 = new Person(personName, xp);
             testSpacecraft.AddPersonnel(person1);
             testSpacecraft.AddPersonnel(person2);
-            double expected = 9;
+            double expected = 9.0D;
             Assert.Equal(expected, testSpacecraft.AverageExperience());
         }
     }

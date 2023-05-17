@@ -10,11 +10,43 @@ namespace LaunchForce
     {
         public string Name;
         public int Fuel;
+        public List<Person> Personnel;
 
         public Spacecraft(string name, int fuel)
         {
             Name = name;
             Fuel = fuel;
+            Personnel = new List<Person>();
+        }
+        public void AddPersonnel(Person person)
+        {
+            Personnel.Add(person);
+        }
+        public List<Person> Roster()
+        {
+            var returnList = new List<Person>();
+            foreach (Person person in Personnel)
+            {
+                returnList.Add(person);
+            }
+            return returnList;
+        }
+        public int TotalExperience()
+        {
+            int returnInt = 0;
+            foreach (Person person in Roster())
+            {
+                returnInt += person.Experience;
+            }
+            return returnInt;
+        }
+        public double AverageExperience()
+        {
+            double sum = Convert.ToDouble(TotalExperience());
+            double count = Convert.ToDouble(Roster().Count);
+            double returnDouble = sum / count;
+
+            return returnDouble;
         }
     }
 }

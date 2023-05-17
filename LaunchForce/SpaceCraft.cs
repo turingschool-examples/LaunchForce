@@ -54,7 +54,7 @@ namespace LaunchForce
 
             foreach(var person in Personnel)
             {
-                averageXP += person.Exoerience;
+                averageXP += person.Experience;
             }
             averageXP = averageXP / Personnel.Count;
 

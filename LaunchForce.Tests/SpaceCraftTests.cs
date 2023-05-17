@@ -26,7 +26,7 @@ namespace LaunchForce.Tests
 
             craft1.AddPersonnel(person1);
 
-            Assert.Equal("brad", craft1.Personnel[0]);
+            Assert.Equal("brad", craft1.Personnel[0].Name);
         }
 
         [Fact]
@@ -42,9 +42,27 @@ namespace LaunchForce.Tests
 
             List<string> roster = craft1.Roster();
 
-            Assert.Equal(roster, craft1.Personnel.Name);
+            Assert.Equal(roster, new List<string> { "brad", "Pitt" });
 
         }
 
-    }
+        [Fact]
+        public void TotalXP_ReturnsCrewsTotalXP()
+
+        {
+            Person person1 = new Person("brad", 100);
+            Person person2 = new Person("Pitt", 100);
+
+            SpaceCraft craft1 = new SpaceCraft("ship", 250);
+
+            craft1.AddPersonnel(person1);
+            craft1.AddPersonnel(person2);
+
+            int totalXP = craft1.TotalXP();
+
+            Assert.Equal(200, totalXP);
+
+        }
+
+    }  
 }

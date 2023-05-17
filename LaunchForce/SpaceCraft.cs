@@ -56,7 +56,7 @@ namespace LaunchForce
             {
                 averageXP += person.Exoerience;
             }
-            averageXP / Personnel.Count;
+            averageXP = averageXP / Personnel.Count;
 
             return averageXP;
         }

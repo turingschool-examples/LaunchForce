@@ -64,5 +64,21 @@ namespace LaunchForce.Tests
 
         }
 
+        [Fact]
+        public void AverageXp_returnsAVGXP_acrossCrew()
+        {
+            Person person1 = new Person("brad", 100);
+            Person person2 = new Person("Pitt", 100);
+
+            SpaceCraft craft1 = new SpaceCraft("ship", 250);
+
+            craft1.AddPersonnel(person1);
+            craft1.AddPersonnel(person2);
+
+            double avgXP= craft1.averageXP();
+
+            Assert.Equal(100, avgXP);
+        }
+
     }  
 }

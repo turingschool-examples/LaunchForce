@@ -41,7 +41,7 @@ namespace LaunchForce.Tests
             var person2 = new Person(personName, xp);
             testSpacecraft.AddPersonnel(person1);
             testSpacecraft.AddPersonnel(person2);
-            var expected = new List<Person>() { person1, person2 };
+            var expected = new List<string>() { "Jack White", "Peyton Watson" };
             Assert.Equal(expected, testSpacecraft.Roster());
         }
         [Fact]

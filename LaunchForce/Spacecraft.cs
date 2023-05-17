@@ -22,19 +22,19 @@ namespace LaunchForce
         {
             Personnel.Add(person);
         }
-        public List<Person> Roster()
+        public List<string> Roster()
         {
-            var returnList = new List<Person>();
+            var returnList = new List<string>();
             foreach (Person person in Personnel)
             {
-                returnList.Add(person);
+                returnList.Add(person.Name);
             }
             return returnList;
         }
         public int TotalExperience()
         {
             int returnInt = 0;
-            foreach (Person person in Roster())
+            foreach (Person person in Personnel)
             {
                 returnInt += person.Experience;
             }

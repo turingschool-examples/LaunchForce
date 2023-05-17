@@ -7,7 +7,7 @@ namespace LaunchForce.Tests
         {
             var testFlotilla = new Flotilla();
 
-            Assert.IsType<Spacecraft>(testFlotilla.Ships);
+            Assert.IsType<List<Spacecraft>>(testFlotilla.Ships);
             Assert.Empty(testFlotilla.Ships);
         }
         [Fact]
@@ -50,7 +50,7 @@ namespace LaunchForce.Tests
             testFlotilla.AddShip(spacecraft1);
             testFlotilla.AddShip(spacecraft2);
 
-            var expected = new List<Person>() { person1, person2, person3, person4 };
+            var expected = new List<string>() { person1.Name, person2.Name, person3.Name, person4.Name };
             Assert.Equal(expected, testFlotilla.Roster());
         }
         [Fact]

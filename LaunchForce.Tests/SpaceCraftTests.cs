@@ -12,7 +12,7 @@ namespace LaunchForce.Tests
         [Fact]
         public void SpaceCraft_Properties_Created()
         {
-            SpaceCraft craft1 = new SpaceCraft("ship1", 250);
+            SpaceCraft craft1 = new SpaceCraft("ship", 250);
 
             Assert.Equal("ship", craft1.Name);
             Assert.Equal(250, craft1.Fuel);

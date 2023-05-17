@@ -47,9 +47,9 @@ namespace LaunchForce
             return totalExp;
         }
 
-        public int AverageExperience()
+        public double AverageExperience()
         {
-            int totalExp = 0;
+            double totalExp = 0.0;
 
             foreach (var person in Personnel)
             {

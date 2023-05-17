@@ -8,7 +8,7 @@ namespace LaunchForce
 {
     public class Flotilla
     {
-        List<SpaceCraft> Ships;
+        public List<SpaceCraft> Ships;
         public Flotilla()
         {
             Ships = new List<SpaceCraft>();

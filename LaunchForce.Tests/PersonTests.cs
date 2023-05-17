@@ -5,11 +5,11 @@ namespace LaunchForce.Tests
         [Fact]
         public void Person_Constructor_InitializesPropertyValues()
         {
-            Person person = new Person("Kathy Chan", 10);
+            Person kathy = new Person("Kathy Chan", 10);
 
-            Assert.Equal("Kathy Chan", person.Name);
-            Assert.Equal(10, person.Experience);
-            Assert.Equal(new List<string>(), person.Specialties);
+            Assert.Equal("Kathy Chan", kathy.Name);
+            Assert.Equal(10, kathy.Experience);
+            Assert.Equal(new List<string>(), kathy.Specialties);
         }
     }
 }

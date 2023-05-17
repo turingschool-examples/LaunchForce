@@ -8,9 +8,9 @@ namespace LaunchForce
 {
     public class Person
     {
-        string Name;
-        int Experience;
-        List<string> Specialties;
+        public string Name;
+        public int Experience;
+        public List<string> Specialties;
 
         public Person(string name, int experience)
         {

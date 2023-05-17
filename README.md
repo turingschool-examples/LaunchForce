@@ -14,7 +14,7 @@
 Create a `Person` class with the following properties and methods:
 * string .Name
 * int .Experience
-* List<string> .Specialties
+* `List<string> .Specialties`
 * void .AddSpecialty(string specialty)
   * this should add the given specialty to the person's list of .Specialties
 
@@ -26,10 +26,10 @@ Create a `Spacecraft` class with the following properties and methods:
 ## Iteration 2
   
 Update your Spacecraft class to have the following properties and methods:
-* List<Person> .Personnel
+* `List<Person> .Personnel`
 * void .AddPersonnel(Person person)
   * this should add the given person to the spacecraft's list of .Personnel
-* List<string> .Roster()
+* `List<string> .Roster()`
   * this should return a list of all the personnel's names
 * int .TotalExperience()
   * this should return the total experience of all personnel
@@ -40,11 +40,11 @@ Update your Spacecraft class to have the following properties and methods:
 
 `Flotilla flotilla = new Flotilla();`
 Create a `Flotilla` class that has the following properties and methods:
-* List<Spacecraft> .Ships
+* `List<Spacecraft> .Ships`
 * void .AddShip(Spacecraft ship)
   * this should add the given spacecraft to the flotilla's .Ships
-* List<string> .Roster()
+* `List<string> .Roster()`
   * this should return a list of all the personnel's names (for all ships)
-* Dictionary<Ship, List<Person> .ShipSummary()
+* `Dictionary<Ship, List<Person> .ShipSummary()`
   * this should return a dictionary where the keys are Ships and the values are that ship's Personnel.
 
